@@ -1,0 +1,7 @@
+/Users/violafalk/Documents/Webbutveckling/NET/moment1.1/bin/Release/net8.0/publish/moment1.1
+/Users/violafalk/Documents/Webbutveckling/NET/moment1.1/bin/Release/net8.0/publish/appsettings.Development.json
+/Users/violafalk/Documents/Webbutveckling/NET/moment1.1/bin/Release/net8.0/publish/appsettings.json
+/Users/violafalk/Documents/Webbutveckling/NET/moment1.1/bin/Release/net8.0/publish/moment1.1.dll
+/Users/violafalk/Documents/Webbutveckling/NET/moment1.1/bin/Release/net8.0/publish/moment1.1.deps.json
+/Users/violafalk/Documents/Webbutveckling/NET/moment1.1/bin/Release/net8.0/publish/moment1.1.runtimeconfig.json
+/Users/violafalk/Documents/Webbutveckling/NET/moment1.1/bin/Release/net8.0/publish/moment1.1.pdb

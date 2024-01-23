@@ -1,0 +1,39 @@
+﻿@page
+@model MyApp.Namespace.RazorModel
+@{
+  //sidans titel
+      ViewData["Title"] = "Razor";
+    //variabel för datum
+      var date = DateTime.Now;
+        //array med kurser
+      string [] courses = { "Webbutveckling I - DT057G", "Introduktion till programmering i JavaScript - DT084G", 
+      "Grafiskt Teknik för webb - DT200G", "Webbanvändbarhet - DT068G", "Webbutveckling II - DT093G", 
+      "Databaser - DT003G", "Webbdesign för CMS - DT197G", "Webbutveckling III - DT173G", "Fullstack-utveckling med ramverk - DT193G", "Projektledning - IK060G"};
+}
+<div class="">
+    <h1 class="display-4">Razor</h1>
+<section class="info">
+
+    <h2>Information</h2>
+  <!--Utskrift av datum-->
+    <p><strong>Datum/klockslag: </strong>  @date.ToString("yyyy/MM/dd HH:mm:ss") </p>
+    <!-- kollar om det är måndag-->
+       @if (date.DayOfWeek == DayOfWeek.Monday)
+    {
+    <p> Idag är det måndag!</p>
+    } else {
+      <p> Idag är det inte måndag</p>
+    }
+
+<h2>Kurser jag har läst</h2>
+
+<!--utskrift av kurser-->
+    <ul id="courseList"> 
+    @foreach( var course in courses) {
+        <li>@course</li>
+    }
+    </ul>
+
+    </section>
+      <button class="btn btn-primary" onclick="sortCourses()">Sortera kurser i bokstavsordning</button>
+</div>

@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - moment1.1</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/moment1._1.styles.css" asp-append-version="true" />
+</head>
+
+<body>
+    <header id="header">
+        <!--Skriver ut tiden-->
+        @{
+            //datum
+            var date = DateTime.Now;
+        }
+        <a class="navbar-brand" asp-area="" id="logo" asp-page="/Index">Moment 1.1</a>
+        <!--formaterar om tidsutskriften-->
+        <p class="mt-4">Dagens datum är @date.ToString("yyyy/MM/dd")</p>
+    </header>
+ <nav class="sidebar mx-4">
+<!--Kollar vilken länk som är aktiv -->
+  <a class="nav-link @(Context.Request.Path == "/" ? "active" : "")" asp-area="" asp-page="/Index">Start</a>
+<a class="nav-link @(Context.Request.Path == "/Razor" ? "active" : "")" asp-area="" asp-page="/Razor">Razor</a>
+<a class="nav-link @(Context.Request.Path == "/About" ? "active" : "")" asp-area="" asp-page="/About">Om mig</a>
+</nav>
+
+    <!-- Content -->
+    <div class="col-md-9 content mb-4">
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+    </div>
+    </div>
+  <!--Footer -->
+    <footer class="border-top footer text-muted text-center ">
+        <div class="container">
+            Av Viola Falk - kontaktia mig via epost: vifa2201@@student.miun.se
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>
